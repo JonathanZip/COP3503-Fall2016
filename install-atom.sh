@@ -2,6 +2,7 @@
 INSTALL_LOC=~/Programs/atom
 LAUNCHER_LOC=~/Desktop/atom.desktop
 BIN_LOC=$INSTALL_LOC/usr/bin
+ICON_LOC=$INSTALL_LOC/usr/share/pixmaps/atom.png
 
 echo 'Downloading Atom!'
 
@@ -18,12 +19,12 @@ dpkg -x deb $INSTALL_LOC
 echo 'Creating Launcher on Desktop!'
 
 # Create Launcher
-printf "[Desktop Entry]\nName=Atom Text Editor\nExec=$BIN_LOC/atom\nTerminal=false\nType=Application" > $LAUNCHER_LOC
+printf "[Desktop Entry]\nName=Atom Text Editor\nExec=$BIN_LOC/atom\nTerminal=false\nType=Application\nIcon=$ICON_LOC" > $LAUNCHER_LOC
 chmod +x $LAUNCHER_LOC
 
 echo 'Adding to Path!'
 
-echo "export PATH=$BIN_LOC:$PATH" >> ~/.bash_profile
+echo "export PATH=$BIN_LOC:\$PATH" >> ~/.bashrc
 
 echo 'Installing Awesome C++ Packages!'
 
