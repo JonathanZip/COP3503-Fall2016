@@ -1,8 +1,9 @@
-class Foo {
-  int fooCounter = 0;
+class Circle {
+private:
+  double radius;
 
 public:
-  Foo();
-  Foo(int startValue);
-  void increment();
-};
+  Circle(double radius);
+  double getArea();
+  double getRadius();
+}
