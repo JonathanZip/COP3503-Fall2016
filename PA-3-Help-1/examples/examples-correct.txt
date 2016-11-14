@@ -1,0 +1,98 @@
+## EXAMPLE 0 ##
+FOR (i, 10, ++)
+BEGIN
+  sum=sum + i / j;
+END
+
+The depth of nested loop(s) is 1
+
+Keywords: FOR BEGIN END
+Identifier: sum i j
+Constant: 10
+Operators: ++ = + /
+Delimiter: ; ,
+
+## EXAMPLE 1 ##
+
+FOR (i, 10, ++)
+BEGIN
+  FOR (j, 10, ++)
+  BEGIN
+    sum=sum + i / j;
+  END
+END
+
+The depth of nested loop(s) is 2
+
+Keywords: FOR BEGIN END
+Identifier: sum i j
+Constant: 10
+Operators: ++ = + /
+Delimiter: ; ,
+
+## EXAMPLE 2 ##
+
+FOR (i, 12, ++)
+BEGIN
+  FOR (j, 10, ++)
+  BEGIN
+    sum=sum + i + j;
+  END
+END
+
+The depth of nested loop(s) is 2
+
+Keywords: FOR BEGIN END
+Identifier: sum i j
+Constant: 12 10
+Operators: ++ = +
+Delimiter: ; ,
+
+## EXAMPLE 3 ##
+
+FOR (i, 12, ++)
+BEGIN
+  FOR (j, 10, ++)
+	BEGIN
+    sum=sum + i + j;
+  END
+	FOR (j, 10, ++)
+	BEGIN
+		FOR (k, 10, ++)
+		BEGIN
+			sum=sum + i + j;
+		END
+	END
+END
+
+The depth of nested loop(s) is 3
+
+Keywords: FOR BEGIN END
+Identifier: sum i j k
+Constant: 12 10
+Operators: ++ = +
+Delimiter: ; ,
+
+## EXAMPLE 4 ##
+FOR (i, 12, ++)
+BEGIN
+  FOR (j, 10, ++)
+  BEGIN
+    sum=sum + i + j;
+  END
+END
+FOR (j, 10, ++)
+BEGIN
+	FOR (k, 10, ++)
+	BEGIN
+		sum=sum + i + j;
+	END
+END
+
+The depth of nested loop(s) is 3
+
+Keywords: FOR BEGIN END
+Identifier: sum i j k
+Constant: 12 10
+Operators: ++ = +
+Delimiter: ; ,
