@@ -1,11 +1,13 @@
 #include "class.h"
 
+// Doesn't work since we are passing the circle "by value" (i.e. a copy).
 void modifyCircle(Circle c) {
   c.setRadius(10.5);
   std::cout << "in function: " << std::endl;
   std::cout << "Circle Radius is: " << c.getRadius() << std::endl;
 }
 
+// Works since we are passing the circle "by reference" (through a pointer)
 void modifyCirclePtr(Circle *c) {
   c->setRadius(10.5);
   std::cout << "in function: " << std::endl;

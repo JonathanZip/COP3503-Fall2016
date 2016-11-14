@@ -3,6 +3,10 @@
 
 #include <iostream>
 
-void printTheNumberOne();
+void printMyName();
+
+class myClass {
+  void myClassFunction();
+};
 
 #endif

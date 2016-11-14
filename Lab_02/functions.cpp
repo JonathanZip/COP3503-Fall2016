@@ -1,10 +1,13 @@
 #include "functions.h"
 
 int main() {
-  // do stuff
-  printTheNumberOne();
+  printMyName();
 }
 
-void printTheNumberOne() {
-  std::cout << "1" << std::endl;
+void printMyName() {
+  std::cout << "Max!" << std::endl;
+}
+
+void MyClass::myClassFunction() {
+
 }
