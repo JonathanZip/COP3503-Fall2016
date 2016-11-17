@@ -52,10 +52,6 @@ Delimiter: ; ,
 
 FOR (i, 12, ++)
 BEGIN
-  FOR (j, 10, ++)
-	BEGIN
-    sum=sum + i + j;
-  END
 	FOR (j, 10, ++)
 	BEGIN
 		FOR (k, 10, ++)
@@ -63,6 +59,10 @@ BEGIN
 			sum=sum + i + j;
 		END
 	END
+  FOR (j, 10, ++)
+	BEGIN
+    sum=sum + i + j;
+  END
 END
 
 The depth of nested loop(s) is 3
@@ -89,7 +89,7 @@ BEGIN
 	END
 END
 
-The depth of nested loop(s) is 3
+The depth of nested loop(s) is 2
 
 Keywords: FOR BEGIN END
 Identifier: sum i j k
