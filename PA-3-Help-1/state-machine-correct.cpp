@@ -28,8 +28,22 @@ enum State {
 };
 
 int main() {
+	std::string input;
+	std::cout << "Please enter a filename: ";
+	std::cin >> input;
 	// you will need to ask the user for the filename, as per pa3.pdf
-	std::ifstream file("example.txt");
+//   	_    ____  ____    _____ _   _ ___ ____
+//    / \  |  _ \|  _ \  |_   _| | | |_ _/ ___|
+//   / _ \ | | | | | | |   | | | |_| || |\___ \
+//  / ___ \| |_| | |_| |   | | |  _  || | ___) |
+// /_/   \_\____/|____/    |_| |_| |_|___|____/
+//
+// __  __ _____ _____ _   _  ___  ____
+// |  \/  | ____|_   _| | | |/ _ \|  _ \
+// | |\/| |  _|   | | | |_| | | | | | | |
+// | |  | | |___  | | |  _  | |_| | |_| |
+// |_|  |_|_____| |_| |_| |_|\___/|____/
+	std::ifstream file(input.c_str());
 	if(!file.is_open()) {
       std::cout << "some intelligent error message" << std::endl;
 			return 1;
